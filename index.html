@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Distributed Chat Application</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <script
+        src="https://cdn.socket.io/4.8.1/socket.io.min.js">
+    </script>
+
+</head>
+
+<body>
+
+    <div class="chat-app">
+
+        <!-- HEADER -->
+
+        <header class="chat-header">
+
+            <div class="brand">
+
+                <div class="brand-icon">
+                    💬
+                </div>
+
+                <div class="brand-info">
+
+                    <h1>
+                        Distributed Chat
+                    </h1>
+
+                    <div class="connection">
+
+                        <span class="online-dot"></span>
+
+                        <span id="connectionText">
+                            Connected
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <button
+                class="clear-button"
+                onclick="clearChat()"
+                title="Clear Chat">
+
+                🗑️
+
+            </button>
+
+        </header>
+
+
+        <!-- CHAT AREA -->
+
+        <main
+            id="chatBox"
+            class="chat-box">
+
+        </main>
+
+
+        <!-- TYPING -->
+
+        <div
+            id="typingIndicator"
+            class="typing-indicator">
+
+        </div>
+
+
+        <!-- USER NAME -->
+
+        <div class="user-area">
+
+            <div class="user-icon">
+                👤
+            </div>
+
+            <input
+                id="username"
+                type="text"
+                placeholder="Enter your name"
+                maxlength="20">
+
+        </div>
+
+
+        <!-- MESSAGE -->
+
+        <div class="message-area">
+
+            <input
+                id="message"
+                type="text"
+                placeholder="Write a message..."
+                maxlength="300">
+
+            <button
+                id="sendButton"
+                onclick="sendMessage()">
+
+                ➤
+
+            </button>
+
+        </div>
+
+
+        <!-- FOOTER -->
+
+        <footer>
+
+            <span>
+                Distributed Computing Project
+            </span>
+
+            <span class="footer-dot">
+                •
+            </span>
+
+            <span>
+                Real-Time Communication
+            </span>
+
+        </footer>
+
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
